@@ -87,19 +87,9 @@ class SinglyLinkedList {
   }
 }
 
-// let list = new SinglyLinkedList();
-// list.push("first");
-// list.push("second");
-// list.push("third");
-// console.log(list.set(2, 'SECOND'));
-// console.log(list)
-
-var twoSum = function (nums, target) {
-  const conjugates = {};
-  for (let i = 0; i < nums.length; i++) {
-    conjugates[nums[i]] = target - nums[i];
-  }
-  console.log(conjugates);
-};
-
-twoSum([2, 3, 4], 6);
+let list = new SinglyLinkedList();
+list.push("first");
+list.push("second");
+list.push("third");
+console.log(list.set(2, "SECOND"));
+console.log(list);
