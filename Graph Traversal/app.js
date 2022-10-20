@@ -48,6 +48,24 @@ class Graph {
 
     return results;
   }
+
+  DFSIterative(vertex) {
+    const stack = [];
+    const results = [];
+    const visited = {};
+
+    stack.push(vertex);
+    while (stack.length !== 0) {
+      const vertex = stack.pop();
+      if (!visited[vertex]) {
+        visited[vertex] = true;
+        results.push(vertex);
+        this.adjacencyList[vertex].forEach((v) => stack.push(v));
+      }
+    }
+
+    return results;
+  }
 }
 
 let graph = new Graph();
@@ -67,4 +85,5 @@ graph.addEdge("D", "E");
 graph.addEdge("D", "F");
 graph.addEdge("E", "F");
 
-graph.DFSRecursive.call(graph, "A");
+// graph.DFSRecursive("A");
+console.log(graph.DFSIterative("A"));
