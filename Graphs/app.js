@@ -1,6 +1,6 @@
 class Graph {
   constructor() {
-    this.adjecencyList = {};
+    this.adjacencyList = {};
   }
 
   addVertex(vertex) {
